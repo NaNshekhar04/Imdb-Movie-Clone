@@ -9,19 +9,19 @@ function inputHandle(e) {
     handleMovies(result);
 }
 
-function handleFavourite(e, data) {
+function handleFavourite(e, detail) {
     e.preventDefault();
     searchDownbar.innerHTML = "";
     let favMoviesInfo = [];
-    let tempData = JSON.parse(localStorage.getItem("favourite movies"));
+    let tempData = JSON.parse(localStorage.getItem("MovieInfo"));
     if (tempData) {
-      favMoviesInfo.unshift(tempData);
-      favMoviesInfo.unshift(data);
-      localStorage.setItem("favourite movies", JSON.stringify(favMoviesInfo));
+        favMoviesInfo.unshift(tempData);
+        favMoviesInfo.unshift(detail);
+        localStorage.setItem("MovieInfo", JSON.stringify(favMoviesInfo));
     } else {
-      localStorage.setItem("favourite movies", JSON.stringify(data));
+        localStorage.setItem("MovieInfo", JSON.stringify(detail));
     }
-  }
+}
 
 async function handleMovies(result) {
     searchDownbar.innerHTML = "";
@@ -50,13 +50,13 @@ async function handleMovies(result) {
             </div>
             `;
 
-
-            document.getElementById("favbtn").addEventListener("click", (e) => handleFavourite(e, data));
+            
+            document.getElementById("favbtn").addEventListener("click", (e) => handleFavourite(e, detail));
 
             function showInfo() {
                 localStorage.setItem("MovieInfo", JSON.stringify(detail));
                 parent.location = "./HTML/movieInfo.html";
-              }
+            }
 
             document.getElementById("info").addEventListener("click", showInfo);
 
