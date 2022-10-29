@@ -3,6 +3,9 @@
     padding: 0%;
 }
 
+body{
+    background-color: #eee;
+}
 
 #searchBar {
     width: 30vw;
@@ -17,4 +20,33 @@
 
 .card-text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.result-card{
+    display: flex;
+    height: 460px;
+    width: 700px;
+    margin-left: 23%;
+    margin-top: 2%;
+    border-radius: 2%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    overflow: hidden;
+    background-color: #eee;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    line-height: 3rem;
+}
+
+#favbtn{
+    margin-bottom: 5px;
+    
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    margin: 1%;
 }

@@ -19,9 +19,11 @@ function handleFavourite(e, detail) {
         favMoviesInfo.unshift(detail);
         localStorage.setItem("MovieInfo", JSON.stringify(favMoviesInfo));
         alert('Movie Added SuccessFully!!')
+        window.location.reload();
     } else {
         localStorage.setItem("MovieInfo", JSON.stringify(detail));
         alert('Something Went Wrong!!')
+        window.location.reload();
     }
 }
 

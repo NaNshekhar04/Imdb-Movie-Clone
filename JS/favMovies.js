@@ -34,7 +34,7 @@ function handleFavourites() {
               <p class="card-text"><b>IMDB Rating :</b> ${element.imdbRating}</p>
             </div>
             <div class="card-body" id="remove_btn">
-              <button class="btn btn-primary" id='delete_movie' onclick="handleRemoveMovie(${index})">REMOVE🗑️</button>
+              <button class="btn btn-danger" id='delete_movie' onclick="handleRemoveMovie(${index})">REMOVE🗑️</button>
               <button id="info_btn" class="btn btn-info" onclick="showDetails(${index})">INFO📄</button>
             </div>
           </div>
