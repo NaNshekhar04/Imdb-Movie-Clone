@@ -50,7 +50,7 @@ async function handleMovies(result) {
             </div>
             `;
 
-            
+
             document.getElementById("favbtn").addEventListener("click", (e) => handleFavourite(e, detail));
 
             function showInfo() {
