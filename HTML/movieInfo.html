@@ -4,9 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MovieVerse || Details</title>
+
+    <!-- Including Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
 </head>
 <body>
-    <h1> Movie Information will be shown here </h1>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"> 🌈 MovieVerse. / <span class="badge badge-primary">MovieInfo</span></a>
+
+            <form class="d-flex">
+                <input id="searchBar" type="text" class="form-control me-lg-3" placeholder="Your Search Starts here.."
+                    aria-label="Your Search Starts here.." aria-describedby="basic-addon1"/>
+            </form>
+
+            <a class="btn btn btn-warning text-md-start" href="#">Favourites ❤️</a>
+        </div>
+    </nav>
+
+    <section>
+        <div id="movie_detail_container"></div>
+    </section>
+
+    <script src="../JS/movieInfo.js"></script>
 </body>
 </html>
