@@ -34,7 +34,16 @@ async function handleMovies(result) {
             </button>
             <button id="info" class="btn btn btn-info">INFO📄</button>
             </div>
-            `
+            `;
+
+            function showInfo() {
+                localStorage.setItem("MovieInfo", JSON.stringify(detail));
+                parent.location = "./HTML/movieInfo.html";
+              }
+
+            document.getElementById("info").addEventListener("click", showInfo);
+
+
         }
     }
 }
