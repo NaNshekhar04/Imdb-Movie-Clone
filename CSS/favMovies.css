@@ -1,0 +1,13 @@
+.displayFavs{
+    margin-top: 25px;
+}
+
+#Favs_list{
+    display: flex;
+    list-style: none;
+    max-width: 50%
+}
+
+.poster{
+    height: 300px;
+}

@@ -22,7 +22,7 @@ function handleFavourites() {
       <li>
         <div>
           <div>
-            <img src=${element.Poster}></img>
+            <img class='poster' src=${element.Poster}></img>
           </div>
           <div>
             <div class="card-body">

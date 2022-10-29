@@ -18,8 +18,10 @@ function handleFavourite(e, detail) {
         favMoviesInfo.unshift(tempData);
         favMoviesInfo.unshift(detail);
         localStorage.setItem("MovieInfo", JSON.stringify(favMoviesInfo));
+        alert('Movie Added SuccessFully!!')
     } else {
         localStorage.setItem("MovieInfo", JSON.stringify(detail));
+        alert('Something Went Wrong!!')
     }
 }
 
