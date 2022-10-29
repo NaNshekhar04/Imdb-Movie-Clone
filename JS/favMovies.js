@@ -2,10 +2,16 @@ const Favslist = document.getElementById("Favs_list")
 
 var favouriteMovies = [];
 
+function showDetails(index) {
+  let element = favouriteMovies[index];
+  localStorage.setItem("MovieInfo", JSON.stringify(element));
+  parent.location = "../HTML/movieInfo.html";
+}
+
 function handleFavourites() {
-    favouriteMovies = JSON.parse(localStorage.getItem("MovieInfo"));
-    Array.from(favouriteMovies).forEach((element, index) => {
-        Favslist.innerHTML += `
+  favouriteMovies = JSON.parse(localStorage.getItem("MovieInfo"));
+  Array.from(favouriteMovies).forEach((element, index) => {
+    Favslist.innerHTML += `
       <li>
         <div>
           <div>
@@ -15,7 +21,6 @@ function handleFavourites() {
             <div class="card-body">
               <div id="header_container">
               <h2 class="card-title" >${element.Title}</h2>
-              <button id="info_btn" onclick="openPage(${index})">
             </div>
               <p class="card-text"><b>Actors :</b> ${element.Actors}</p>
               <p class="card-text"><b>Year :</b> ${element.Year}</p>
@@ -23,14 +28,14 @@ function handleFavourites() {
             </div>
             <div class="card-body" id="remove_btn">
               <button class="btn btn-primary" id='delete_movie' onclick="handleRemoveMovie(${index})">REMOVE🗑️</button>
-              <button id="info" class="btn btn btn-info">INFO📄</button>
+              <button id="info_btn" class="btn btn-info" onclick="showDetails(${index})">INFO📄</button>
             </div>
           </div>
         </div>
       </li>
       `
-    }
-    )
+  }
+  )
 }
 
 
