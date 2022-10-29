@@ -1,6 +1,13 @@
-const Favslist = document.getElementById("Favs_list")
+const Favslist = document.getElementById("Favs_list");
 
 var favouriteMovies = [];
+
+function handleRemoveMovie(index) {
+  let data = JSON.parse(localStorage.getItem("MovieInfo"));
+  data.splice(index, 1);
+  localStorage.setItem("MovieInfo", JSON.stringify(data));
+  window.location.reload();
+}
 
 function showDetails(index) {
   let element = favouriteMovies[index];
@@ -33,10 +40,8 @@ function handleFavourites() {
           </div>
         </div>
       </li>
-      `
-  }
-  )
+      `;
+  });
 }
-
 
 handleFavourites();
