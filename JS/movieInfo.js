@@ -5,7 +5,7 @@ function displayMovieDetails() {
 
     let details = JSON.parse(localStorage.getItem("MovieInfo"));
     movieDetails.innerHTML = `  <div class="movie-poster">
-    <img src="${(details.Poster != 'N/A') ? details.Poster : "Movie-not-found"}">
+    <img class='infoPoster' src="${(details.Poster != 'N/A') ? details.Poster : "Movie-not-found"}">
 </div>
 <div class="movie-info">
     <h3 class="movie-title">${details.Title}</h3>
