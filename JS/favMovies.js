@@ -1,6 +1,12 @@
+// FETCHING FAVOURITES LIST ID 
+
 const Favslist = document.getElementById("Favs_list");
 
+// INITIAL EMPTY ARRAY WITH NO FAVOURITES 
+
 var favouriteMovies = [];
+
+// FUNCTION TO HANDLE REMOVING MOVIES FROM FAVOURITES SECTION 
 
 function handleRemoveMovie(index) {
   let data = JSON.parse(localStorage.getItem("MovieInfo"));
@@ -9,11 +15,15 @@ function handleRemoveMovie(index) {
   window.location.reload();
 }
 
+// FUNCTION TO SHOW MOVIE DETAILS FROM FAVOURITES SECTION 
+
 function showDetails(index) {
   let element = favouriteMovies[index];
   localStorage.setItem("MovieInfo", JSON.stringify(element));
   parent.location = "../HTML/movieInfo.html";
 }
+
+// FUNCTION TO SHOW FAVOURITED MOVIE FROM OUR LOCALSTORAGE 
 
 function handleFavourites() {
   favouriteMovies = JSON.parse(localStorage.getItem("MovieInfo"));
