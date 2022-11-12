@@ -9,6 +9,7 @@ var favouriteMovies = [];
 // FUNCTION TO HANDLE REMOVING MOVIES FROM FAVOURITES SECTION 
 
 function handleRemoveMovie(index) {
+  console.log('inside remove movie')
   let data = JSON.parse(localStorage.getItem("MovieInfo"));
   data.splice(index, 1);
   localStorage.setItem("MovieInfo", JSON.stringify(data));
@@ -18,6 +19,7 @@ function handleRemoveMovie(index) {
 // FUNCTION TO SHOW MOVIE DETAILS FROM FAVOURITES SECTION 
 
 function showDetails(index) {
+  console.log('inside show details movie')
   let element = favouriteMovies[index];
   localStorage.setItem("MovieInfo", JSON.stringify(element));
   parent.location = "../HTML/movieInfo.html";
@@ -25,9 +27,15 @@ function showDetails(index) {
 
 // FUNCTION TO SHOW FAVOURITED MOVIE FROM OUR LOCALSTORAGE 
 
-function handleFavourites() {
+
+ function handleFavourites() {
   favouriteMovies = JSON.parse(localStorage.getItem("MovieInfo"));
-  Array.from(favouriteMovies).forEach((element, index) => {
+  if(favouriteMovies.length == 0){
+    // alert("No movies added till now");
+    Favslist.innerHTML = "<li>No Movies Added till now</li>";
+  }
+  favouriteMovies.forEach((element, index) => {
+    console.log(element);
     Favslist.innerHTML += `
       <li>
         <div>
@@ -53,5 +61,6 @@ function handleFavourites() {
       `;
   });
 }
+
 
 handleFavourites();

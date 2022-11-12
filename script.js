@@ -16,23 +16,22 @@ function inputHandle(e) {
 
 // FUNCTION TO ADD MOVIES TO THE FAVOURITES 
 
+
 function handleFavourite(e, detail) {
     e.preventDefault();
     searchDownbar.innerHTML = "";
-    let favMoviesInfo = [];
-    let tempData = JSON.parse(localStorage.getItem("MovieInfo"));
-    if (tempData) {
-        favMoviesInfo.unshift(tempData);
-        favMoviesInfo.unshift(detail);
-        localStorage.setItem("MovieInfo", JSON.stringify(favMoviesInfo));
-        alert('Movie Added SuccessFully 🎉🎉Checkout Favourites !')
-        window.location.reload();
+    let tempData = localStorage.getItem("MovieInfo");
+    if (tempData == null) {
+        tempData = [];
     } else {
-        localStorage.setItem("MovieInfo", JSON.stringify(detail));
-        alert('Something Went Wrong!!')
-        window.location.reload();
-    }
+        tempData = JSON.parse(localStorage.getItem("MovieInfo"));
+    };
+    alert('Movie Added SuccessFully 🎉🎉Checkout Favourites !')
+    tempData.push(detail);
+    localStorage.setItem("MovieInfo", JSON.stringify(tempData));
+    window.location.reload();
 }
+
 
 // FUNCTION TO DISPLAY CONTENT ON A MOVIESEARCH 
 
@@ -42,7 +41,6 @@ async function handleMovies(result) {
         const res = await fetch(URL + `&t=${result}`);
         let detail = await res.json();
         if (detail.Response === "False") {
-            console.log("not found");
             return;
         } else {
             searchDownbar.innerHTML = `
