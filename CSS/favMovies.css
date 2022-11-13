@@ -1,16 +1,15 @@
-
 /* FAVOURITES MOVIE CSS  */
 
-.displayFavs{
+.displayFavs {
     margin-top: 25px;
 }
 
-#Favs_list{
+#Favs_list {
     display: flex;
     list-style: none;
     max-width: 50%
 }
 
-.poster{
+.poster {
     height: 300px;
 }

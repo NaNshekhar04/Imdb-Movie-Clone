@@ -70,7 +70,7 @@ async function handleMovies(result) {
             // FUNCTION TO DISPLAY DETAILED INFORMATION OF A MOVIE ON CLICKING THE INFO BUTTON 
 
             function showInfo() {
-                localStorage.setItem("MovieInfo", JSON.stringify(detail));
+                localStorage.setItem("ShowInfo", JSON.stringify(detail));
                 parent.location = "./HTML/movieInfo.html";
             }
 

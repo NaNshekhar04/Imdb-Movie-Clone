@@ -5,7 +5,7 @@ const movieDetails = document.getElementById('movie_detail_container');
 // FUNCTION TO DISPLAY DETAILED CONTENT OF A PARTICULAR MOVIE 
 
 function displayMovieDetails() {
-  let details = JSON.parse(localStorage.getItem("ShowInfo"));
+  let details = JSON.parse(localStorage.getItem("favMovieInfo"));
   movieDetails.innerHTML = `  <div class="movie-poster">
     <img class='infoPoster' src="${(details.Poster != 'N/A') ? details.Poster : "Movie-not-found"}">
 </div>

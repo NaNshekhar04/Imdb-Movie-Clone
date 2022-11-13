@@ -1,15 +1,16 @@
+/* OVERALL APPLICATION STYLES */
 * {
     margin: 0%;
     padding: 0%;
 }
 
-body{
-    background-color: #eee;
-}
+/* SEARCH BAR STYLES */
 
 #searchBar {
     width: 30vw;
 }
+
+/* CARD RESULT TITLE STYLES */
 
 .card-title {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -18,15 +19,19 @@ body{
     word-break: keep-all;
 }
 
+/* CARD RESULT TEXT STYLES */
+
 .card-text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.result-card{
+/* CARD RESULT OVERALL STYLES ! */
+
+.result-card {
     display: flex;
     height: 460px;
     width: 700px;
-    margin-left: 23%;
+    margin-left: 26%;
     margin-top: 2%;
     border-radius: 2%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -34,18 +39,24 @@ body{
     background-color: #eee;
 }
 
-.card-body{
+/* RESULT BODY STYLINGS */
+
+.card-body {
     display: flex;
     flex-direction: column;
     line-height: 3rem;
 }
 
-#favbtn{
+/* FAVOURITES BUTTON STYLE  */
+
+#favbtn {
     margin-bottom: 5px;
-    
+
 }
 
-.title{
+/* CARDS ABOVE TITLE STYLING */
+
+.title {
     display: flex;
     justify-content: center;
     margin: 1%;
