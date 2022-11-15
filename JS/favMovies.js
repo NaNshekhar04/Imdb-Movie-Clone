@@ -5,7 +5,6 @@ const Favslist = document.getElementById("Favs_list");
 // FUNCTION TO HANDLE REMOVING MOVIES FROM FAVOURITES SECTION 
 
 function handleRemoveMovie(index) {
-  console.log('inside remove movie')
   let data = JSON.parse(localStorage.getItem("MovieInfo"));
   data.splice(index, 1);
   localStorage.setItem("MovieInfo", JSON.stringify(data));
@@ -15,7 +14,6 @@ function handleRemoveMovie(index) {
 // FUNCTION TO SHOW MOVIE DETAILS FROM FAVOURITES SECTION 
 
 function showDetails(index) {
-  console.log('inside show details movie');
   let favMovieArray = JSON.parse(localStorage.getItem("MovieInfo"));
   let element = favMovieArray[index];
   localStorage.setItem("ShowInfo",JSON.stringify(element));
